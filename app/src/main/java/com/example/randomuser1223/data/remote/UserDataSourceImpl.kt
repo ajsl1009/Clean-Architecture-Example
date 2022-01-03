@@ -8,7 +8,7 @@ class UserDataSourceImpl @Inject constructor(
     private val apiService: ApiService,
 ) : UserDataSource {
     override suspend fun getUserList(): UserSpec {
-        apiService.getUserList(100).let {
+        apiService.getUserList().let {
             if (it.isSuccessful) {
                 return it.body() ?: UserSpec()
             } else {
