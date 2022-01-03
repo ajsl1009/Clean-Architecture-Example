@@ -23,7 +23,7 @@ import javax.inject.Singleton
 object RetrofitModule {
     @Provides
     fun provideApiService(): ApiService = Retrofit.Builder()
-        .baseUrl("https://randomuser.me/")
+        .baseUrl("https://d6d8aa56-a703-4d9d-962e-ef65c3e8eb77.mock.pstmn.io/")
         .addConverterFactory(GsonConverterFactory.create())
         .client(OkHttpClient.Builder().build())
         .build()

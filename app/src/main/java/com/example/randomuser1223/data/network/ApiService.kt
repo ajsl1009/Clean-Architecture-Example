@@ -6,6 +6,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface ApiService {
-    @GET("/api")
-    suspend fun getUserList(@Query("results") result: Int): Response<UserSpec>
+    @GET("/test")
+    suspend fun getUserList(): Response<UserSpec>
 }
